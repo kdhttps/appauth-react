@@ -11,11 +11,11 @@ export const Home = () => {
     const [error, setError] = useState(null);
     const authorizationHandler = new RedirectRequestHandler(new LocalStorageBackend(), new NoHashQueryStringUtils(), window.location, new DefaultCrypto());
     const redirect = () => {
-        AuthorizationServiceConfiguration.fetchFromIssuer(environment.openid_connect_url, new FetchRequestor())
+        AuthorizationServiceConfiguration.fetchFromIssuer(environment.OPServer, new FetchRequestor())
             .then((response) => {
                 const authRequest = new AuthorizationRequest({
-                    client_id: environment.client_id,
-                    redirect_uri: environment.redirect_uri,
+                    client_id: environment.clientId,
+                    redirect_uri: environment.redirectURL,
                     scope: environment.scope,
                     response_type: AuthorizationRequest.RESPONSE_TYPE_CODE,
                     state: undefined,
