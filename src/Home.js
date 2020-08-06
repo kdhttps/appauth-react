@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     AuthorizationServiceConfiguration,
     AuthorizationRequest, RedirectRequestHandler,
     FetchRequestor, LocalStorageBackend, DefaultCrypto
 } from '@openid/appauth';
-import {NoHashQueryStringUtils} from './noHashQueryStringUtils';
+import { NoHashQueryStringUtils } from './noHashQueryStringUtils';
 import environment from './environment';
 
 export const Home = () => {
@@ -43,10 +43,18 @@ export const Home = () => {
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">Welcome !!!</h5>
-                    <p className="card-text">Angular Demo Application protected by <a href="https://gluu.org"
-                                                                                      rel="noopener noreferrer" target="_blank">Gluu
-                        CE OpenID Connect</a> using <a href="https://github.com/openid/AppAuth-JS" rel="noopener noreferrer"
-                                                       target="_blank">App Auth JS</a></p>
+                    <p className="card-text">React Demo Application protected by &nbsp;
+                    <a href="https://auth0.com" rel="noopener noreferrer" target="_blank">
+                            Auth0
+                        </a>
+                         
+                        &nbsp; using &nbsp; 
+
+                        <a href="https://github.com/openid/AppAuth-JS" rel="noopener noreferrer"
+                            target="_blank">
+                            App Auth JS
+                        </a>
+                    </p>
                     <button type="button" className="btn btn-primary" onClick={redirect}>Login</button>
                 </div>
             </div>

@@ -49,7 +49,7 @@ export const Callback = (props) => {
                     })
                     .then((oResponse) => {
                         localStorage.setItem('access_token', oResponse.accessToken);
-                        props.history.push('/user');
+                        props.history.push('/profile');
                     })
                     .catch(oError => {
                         setError(oError);
