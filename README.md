@@ -3,6 +3,8 @@
 [App-Auth JS](https://github.com/openid/AppAuth-JS) integration with the React App.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![react-flow](./public/react-flow.gif)
+
 ## Prerequisites
 
 1. Node JS >= 10.x.x
